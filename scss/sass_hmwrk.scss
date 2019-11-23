@@ -2,16 +2,17 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/functions";
-/*          DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     */
-@media only screen and (min-width: 1025px) {
+
+/*          DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     */
+@media only screen and (min-width: 1024px) {
     .login {
         display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        height: 30px;
+        background-color: $blue_main;
         justify-content: flex-end;
-        background-color: $header;
-        border-bottom: solid 3px $header;
-        
-        button {
+        button{
+            margin-right: 100px;
             border-radius: 10px;
             background-color: $button;
             border: none;
@@ -19,12 +20,12 @@
             font-size: 10px;
             width: 100px;
             height: 25px;
-            margin-top: 0px;
-            margin-right: 160px;
-            
-        }   
+            margin-bottom: 30px;
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
     }
-    
     header {
         padding: 20px;
         background: $blue_gradient;
@@ -36,7 +37,7 @@
         position: absolute;
         height: 175px;
         width: 100%;
-        border-top: solid 5px $header;
+                
         h1 {
             flex: 1;
             padding: 0 20px;
@@ -50,6 +51,13 @@
             display: inline-block;
             text-decoration: none;
             padding-right: 20px;
+            a {
+                color: $text-top;
+                text-decoration: none;
+                &:hover {
+                    text-decoration-line: underline;
+                }
+            }
         }
         
     }
@@ -90,7 +98,7 @@
             }
             p {
                 background-color: white;
-                color: $header;
+                color: $blue_main;
                 font-size: 12px;
                 font-weight: 600;
                 padding: 5px 10px;
@@ -102,21 +110,27 @@
             flex-direction: row;
             .browse {
                 @include buttons-top;
-                background-color: $header;
+                background-color: $blue_main;
                 span {
                     flex: 1;
                     font-weight: 600;
                     font-size: 12px;
                     margin-right: 10px;
                 }
+                &:hover {
+                    border: none;
+                }
             }
             .signup {
                 @include buttons-top;
-                background-color: $orange;
+                background-color: $orange_main;
                 span {
                     flex: 1;
                     font-size: 14px;
                     font-weight: 600;
+                }
+                &:hover {
+                    border: none;
                 }
             }
         }
@@ -137,7 +151,7 @@
             flex: 1.5;
             margin-right: 20px;
             h2 {
-                color: $header;
+                color: $blue_main;
                 font-weight: 500;
                 &:after {
                     content: '';
@@ -168,7 +182,7 @@
                     }*/
                     h4 {
                         padding-right: 5px;
-                    }
+                        /*  loop or function  */
                     img {
                         width: 25%;
                         height: 100px;
@@ -297,15 +311,16 @@
 
 /*      TABLET      TABLET      TABLET      TABLET      TABLET      TABLET      TABLET      TABLET      */
 
-@media only screen and (min-width: 700px) and (max-width: 1024px){
+@media only screen and (min-width: 700px) and (max-width: 1023px){
+    
     .login {
         display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        height: 30px;
+        background-color: $blue_main;
         justify-content: flex-end;
-        background-color: $header;
-        border-bottom: solid 3px $header;
-        
-        button {
+        button{
+            margin-right: 110px;
             border-radius: 10px;
             background-color: $button;
             border: none;
@@ -313,12 +328,9 @@
             font-size: 10px;
             width: 100px;
             height: 25px;
-            margin-top: 0px;
-            margin-right: 160px;
-            
-        }   
+            margin-bottom: 30px;  
+        }
     }
-    
     header {
         padding: 20px;
         background: $blue_gradient;
@@ -330,7 +342,8 @@
         position: absolute;
         height: 110px;
         width: 100%;
-        border-top: solid 5px $header;
+        border-top: solid 5px $blue_main;
+       margin: 0;
         h1 {
             flex: 1;
             padding: 0 20px;
@@ -384,7 +397,7 @@
             }
             p {
                 background-color: white;
-                color: $header;
+                color: $blue_main;
                 font-size: 12px;
                 font-weight: 600;
                 padding: 5px 10px;
@@ -396,7 +409,7 @@
             flex-direction: row;
             .browse {
                 @include buttons-top;
-                background-color: $header;
+                background-color: $blue_main;
                 span {
                     flex: 1;
                     font-weight: 600;
@@ -406,7 +419,7 @@
             }
             .signup {
                 @include buttons-top;
-                background-color: $orange;
+                background-color: $orange_main;
                 span {
                     flex: 1;
                     font-size: 14px;
@@ -431,7 +444,7 @@
             flex: 1;
             margin-right: 20px;
             h2 {
-                color: $header;
+                color: $blue_main;
                 font-weight: 500;
                 &:after {
                     content: '';
@@ -582,14 +595,14 @@
 /*      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      */
 
 @media only screen and (max-width: 699px) {
+    
     .login {
-        width: 100%;
         display: flex;
-        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        background-color: $blue_main;
         justify-content: center;
-        background-color: $header;
-        
-        button {
+        button{
             border-radius: 10px;
             background-color: $button;
             border: none;
@@ -597,10 +610,9 @@
             font-size: 10px;
             width: 100px;
             height: 25px;
-            margin-top: 0px;            
-        }   
+            margin-bottom: 30px;  
+        }
     }
-    
     header {
         background: $blue_gradient;
         display: flex;
@@ -611,7 +623,7 @@
         font-family: $font;
         height: 120px;
         width: 100%;
-        border-top: solid 5px $header;
+        border-top: solid 5px $blue_main;
         h1 {
             flex: 1;
             padding: 20px;
@@ -660,7 +672,7 @@
             }
             p {
                 background-color: white;
-                color: $header;
+                color: $blue_main;
                 font-size: 12px;
                 font-weight: 600;
                 padding: 5px 10px;
@@ -673,7 +685,7 @@
             .browse {
                 @include buttons-top;
                 width: 220px;
-                background-color: $header;
+                background-color: $blue_main;
                 span {
                     flex: 1;
                     font-weight: 600;
@@ -684,7 +696,7 @@
             .signup {
                 @include buttons-top;
                 width: 220px;
-                background-color: $orange;
+                background-color: $blue_main;
                 span {
                     flex: 1;
                     font-size: 14px;
@@ -710,7 +722,7 @@
             flex: 1;
             margin: 0 auto;
             h2 {
-                color: $header;
+                color: $blue_main;
                 text-align: center;
                 &:after {
                     content: '';
