@@ -72,13 +72,17 @@
         margin: 0 auto;
         position: relative;
         top: 100px;
-        img {
-            width: 50%;
-            height: 100%;
-            border: white solid 10px;
-            border-radius: 5px;
-            margin: 0;
-            /*box-shadow: $box_shadow;*/
+        .banner-wrapper {
+            img {
+                width: 100%;
+                height: auto;
+                border: white solid 10px;
+                border-radius: 5px;
+                margin: 0;
+                box-shadow: $box_shadow;
+                -webkit-box-shadow: 0px 2px 5px 4px rgba(34,34,34,0.5);
+                -moz-box-shadow: 0px 2px 5px 4px rgba(34, 34, 34, 0.5);
+            }
         }
         
         .description {
@@ -110,6 +114,7 @@
             flex-direction: row;
             .browse {
                 @include buttons-top;
+                border-color: $blue_main;
                 background-color: $blue_main;
                 span {
                     flex: 1;
@@ -123,6 +128,7 @@
             }
             .signup {
                 @include buttons-top;
+                border-color: $orange_main;
                 background-color: $orange_main;
                 span {
                     flex: 1;
@@ -172,22 +178,20 @@
                     display: flex;
                     flex-direction: row;
                     margin: 10px;
-                    /*&:after {
-                        content: '';
-                        flex-direction: column;
-                        display: block;
-                        width: 100%;
-                        height: 1px;
-                        background-color: #888;
-                    }*/
+                    border-bottom: solid 1px #888;
                     h4 {
                         padding-right: 5px;
                         /*  loop or function  */
-                    img {
-                        width: 25%;
-                        height: 100px;
-                        margin-right: 5px;
+                    }
+                    .img-wrapper {
+                        overflow: hidden;
+                        max-width: 75px;
                         flex: 1;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            margin-right: 5px;
+                        }
                     }
                     .description {
                         display: flex;
@@ -222,12 +226,16 @@
             article {
                 display: flex;
                 flex-direction: row;
-
-                img {
-                    width: 275px;
-                    height: 100%;
-                    flex: 1;
+                .vid-wrapper {
+                    overflow: hidden;
+                        min-width: 300px;
+                        flex: 1;
+                    img {
+                        width: 275px;
+                        height: 100%;
+                    }
                 }
+                
                 .script {
                     display: flex;
                     flex: 1;
@@ -304,8 +312,9 @@
         text-align: center;     
         inline-size: 50px;
         width: 100%;    
-        margin: 10px 0; 
+        padding: 10px 0; 
         font-size: 14px;   
+        background-color: rgb(177, 177, 248);
     }
 }
 
@@ -464,12 +473,17 @@
                     display: flex;
                     flex-direction: row;
                     margin: 10px;
-                    img {
-                        width: 25%;
-                        height: 150px;
-                        margin-right: 5px;
+                    .img-wrapper {
+                        overflow: hidden;
+                        min-width: 100px;
                         flex: 1;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            margin-right: 5px;
+                        }
                     }
+                }
                     .description {
                         display: flex;
                         flex: 2;
@@ -529,7 +543,6 @@
             }
         }
         
-    }
     .more_info_menu {
         margin-top: 75px;
         width: 100%;
@@ -592,6 +605,8 @@
     }
 }
 
+
+
 /*      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      */
 
 @media only screen and (max-width: 699px) {
@@ -631,11 +646,20 @@
         ul {
             flex: 1;
             flex-direction: row;
+            margin: 0 auto;
+            :nth-child(1){
+                padding-left: 0;
+            }
         }
         ul li{
             display: inline-block;
             text-decoration: none;
-            padding-right: 20px;
+            padding-left: 20px;
+            
+            a {
+                text-decoration: none;
+                color: $text-top;
+            }
         }
         
     }
@@ -696,7 +720,7 @@
             .signup {
                 @include buttons-top;
                 width: 220px;
-                background-color: $blue_main;
+                background-color: $orange_main;
                 span {
                     flex: 1;
                     font-size: 14px;
@@ -708,7 +732,7 @@
     }
     
     .offer {
-        height: 1400px;
+        height: 1370px;
         width: 90%;
         display: flex;
         flex-direction: column;
@@ -750,11 +774,15 @@
                         height: 1px;
                         background-color: #888;
                     }*/
-                    img {
-                        width: 25%;
-                        height: 150px;
-                        margin-right: 5px;
+                    .img-wrapper {
+                        overflow: hidden;
+                        min-width: 100px;
                         flex: 1;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            margin-right: 5px;
+                        }
                     }
                     .description {
                         display: flex;
@@ -795,7 +823,7 @@
                 img {
                     width: 75%;
                     flex: 1;
-                    margin: 10px;
+                    margin: 10px auto;
                 }
                 .script {
                     display: flex;
