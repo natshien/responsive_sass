@@ -1,0 +1,170 @@
+/*          DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     */
+@media only screen and (min-width: 1024px) {
+    .more_info_menu {
+        margin-top: 75px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 320px;
+        color: #FFF;
+        display: flex;
+        .bottom_container{
+            background-color: $info_menu;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 50px;
+            font-family: $font;
+           article {
+                flex: 1;
+                h4 {
+                    justify-content: flex-start;
+                    margin-bottom: 10px;
+                }
+                ul {
+                    padding-left: 20px;
+                    list-style: none;
+                    li::before {
+                        content: "\2022";
+                        color: $info_bullets;
+                        margin-right: 5px;
+                        display: inline-block;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+                button {
+                    background-color: $info_bullets;
+                    color: #FFF;
+                    border: none;
+                    padding: 5px;
+                    border-radius: 3px;
+                    float: right;
+                    margin-right: 10px;
+                }
+            }
+        }   
+    }
+}
+
+
+/*      TABLET      TABLET      TABLET      TABLET      TABLET      TABLET      TABLET      TABLET      */
+
+@media only screen and (min-width: 700px) and (max-width: 1023px){
+    .more_info_menu {
+        margin-top: 75px;
+        width: 100%;
+        margin: 0 auto;
+        color: #FFF;
+        display: flex;
+        .bottom_container{
+            background-color: $info_menu;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            font-family: $font;
+            padding: 10px;
+           article {
+               flex: 1;
+               margin: 30px 35px;
+                h4 {
+                    justify-content: flex-start;
+                    margin-bottom: 10px;
+                }
+                ul {
+                    padding-left: 20px;
+                    list-style: none;
+                    li::before {
+                        content: "\2022";
+                        color: $info_bullets;
+                        margin-right: 5px;
+                        display: inline-block;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                    justify-content: center;
+                }
+                button {
+                    background-color: $info_bullets;
+                    color: #FFF;
+                    border: none;
+                    padding: 5px;
+                    border-radius: 3px;
+                    float: right;
+                    margin-right: 75px;
+                }
+            }
+        }   
+    }
+}
+
+
+/*      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      MOBILE      */
+
+@media only screen and (max-width: 699px) {
+    .more_info_menu {
+        margin-top: 75px;
+        width: 100%;
+        margin: 0 auto;
+        color: #FFF;
+        display: flex;
+        .bottom_container{
+            background-color: $info_menu;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            font-family: $font;
+            padding: 10px;
+           article {
+               flex: 1;
+               margin: 30px 35px;
+                h4 {
+                    justify-content: flex-start;
+                    margin-bottom: 10px;
+                }
+                ul {
+                    padding-left: 20px;
+                    list-style: none;
+                    li::before {
+                        content: "\2022";
+                        color: $info_bullets;
+                        margin-right: 5px;
+                        display: inline-block;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                    justify-content: center;
+                }
+                button {
+                    background-color: $info_bullets;
+                    color: #FFF;
+                    border: none;
+                    padding: 5px;
+                    border-radius: 3px;
+                    float: right;
+                    margin-right: 75px;
+                }
+            }
+        }  
+    }
+}
