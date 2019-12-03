@@ -1,3 +1,8 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/functions";
+
 /*          DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     DESKTOP     */
 @media only screen and (min-width: 1024px) {
     .banner {
@@ -37,15 +42,27 @@
                 color: $text-top;
                 font-size: 20px;
                 padding: 5px;
+               /* shit came out of it :D 
+                &:after {
+                    content: 'KNOW MORE';
+                    width: 50px;
+                    height: 30px;
+                    background-color: $green_main;
+                    color: $text-top;
+                    rotate: (-45deg);
+                    position: relative;
+                    display: block;
+                } */ 
             }
             p {
                 background-color: white;
                 color: $blue_main;
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: 600;
                 padding: 5px 10px;
                 border: white solid 3px;
             }
+            
         }
         .buttons {
             display: flex;
@@ -53,6 +70,7 @@
             .browse {
                 @include buttons-top;
                 border-color: $blue_main;
+                /*background-color: $blue_gradient;  looks weird*/
                 background-color: $blue_main;
                 span {
                     flex: 1;
@@ -98,12 +116,13 @@
         margin-top: 130px;
         top: 100px;
         img {
-            width: 50%;
+            width: 100%;
             height: 100%;
             border: white solid 10px;
             border-radius: 5px;
-            margin: 0;
-            /*box-shadow: $box_shadow;*/
+            box-shadow: $box_shadow;
+            -webkit-box-shadow: 0px 2px 5px 4px rgba(34,34,34,0.5);
+            -moz-box-shadow: 0px 2px 5px 4px rgba(34, 34, 34, 0.5);
         }
         
         .description {
@@ -174,7 +193,9 @@
             width: 100%;
             border-radius: 2px;
             margin: 0;
-            /*box-shadow: $box_shadow;*/
+            box-shadow: $box_shadow;
+            -webkit-box-shadow: 0px 2px 5px 4px rgba(34,34,34,0.5);
+            -moz-box-shadow: 0px 2px 5px 4px rgba(34, 34, 34, 0.5);
         }
         
         .description {

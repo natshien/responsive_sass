@@ -1,9 +1,33 @@
-/*@function headlines(){
-    @if :nth-child(1n) {
-        background-color: $orange_main;
-    } @else if :nth-child(2n) {
-        background-color: $green_main;
-    } @else {
-        background-color: $blue_main;
+@import "partials/variables";
+
+
+$titleColors:rgb(15, 167, 15), rgb(248, 140, 16), #1f8ee5;
+$titleColorsLength: length($titleColors);
+
+.propositions article {  
+  @for $i from 1 through $titleColorsLength {
+    &:nth-of-type(#{$titleColorsLength}n+#{$i}) .description h4 {
+      color: nth($titleColors, $i);
     }
-}*/
+  }  
+}
+
+$spanColors:rgb(248, 140, 16), rgb(15, 167, 15), #1f8ee5;
+$spanColorsLength: length($titleColors);
+
+.comingsoon article {  
+    @for $i from 1 through $spanColorsLength {
+      &:nth-of-type(#{$spanColorsLength}n+#{$i}) .script span {
+        background-color: nth($spanColors, $i);
+        color: white;
+      }
+    }  
+}
+
+.comingsoon article {
+    @for $i from 1 through $spanColorsLength {
+        &:nth-of-type(#{$spanColorsLength}n+#{$i}) .script h4 {
+          color: nth($spanColors, $i);
+        }
+      }  
+}
