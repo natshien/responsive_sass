@@ -1,0 +1,21 @@
+@media only screen and (max-width: 699px) {
+    footer {
+        text-align: center;     
+        inline-size: 50px;
+        width: 100%;    
+        padding: 10px 0; 
+        font-size: 12px;   
+        background-color: rgb(177, 177, 248);
+    }
+}
+@media only screen and (min-width: 700px) {
+    footer {
+        text-align: center;     
+        inline-size: 50px;
+        width: 100%;    
+        padding: 10px 0; 
+        font-size: 14px;   
+        background-color: rgb(177, 177, 248);
+    }
+}
+
