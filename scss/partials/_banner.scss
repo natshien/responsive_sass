@@ -42,18 +42,19 @@
                 color: $text-top;
                 font-size: 20px;
                 padding: 5px;
-               /* shit came out of it :D 
-                &:after {
-                    content: 'KNOW MORE';
-                    width: 50px;
-                    height: 30px;
-                    background-color: $green_main;
-                    color: $text-top;
-                    rotate: (-45deg);
-                    position: relative;
-                    display: block;
-                } */ 
             }
+            /*.rotated {
+                width: 120px;
+                height: 30px;
+                background-color: $green_main;
+                color: $text-top;
+                transform: rotate(-45deg);
+                padding: 0 auto;
+                justify-content: center;
+                position: relative;
+                margin-left: 200px;
+                margin-top: -100px;
+            } */             
             p {
                 background-color: white;
                 color: $blue_main;

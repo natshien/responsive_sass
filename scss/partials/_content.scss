@@ -16,7 +16,7 @@
         .entries {
             display: flex;
             flex-direction: column;
-            flex: 1.5;
+            flex: 1;
             margin-right: 20px;
             h2 {
                 color: $blue_main;
@@ -36,6 +36,7 @@
             .propositions {
                 display: flex;
                 flex-direction: column;
+                flex: 1;
                 :last-child {
                     border: none;
                 }
@@ -92,10 +93,10 @@
                 flex-direction: row;
                 .vid-wrapper {
                     overflow: hidden;
-                        min-width: 300px;
+                        max-width: 400px;
                         flex: 1;
                     img {
-                        width: 275px;
+                        width: 370px;
                         height: 100%;
                     }
                 }
